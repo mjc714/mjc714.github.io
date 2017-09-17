@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<title>Portfolio Site</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<!-- jQuery library -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+	<!-- Bootstrap -->
+	<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<!-- Roboto Google Font -->
+	<link href="https://fonts.googleapis.com/css?family=Roboto:300,400,700" rel="stylesheet">
+	<!-- Main stylesheet -->
+	<link rel="stylesheet" type="text/css" href="./css/main.css">
+</head>
+
+<body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="60">
+	<nav class="navbar navbar-default navbar-fixed-top">
+		<div class="container">
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+        			<span class="icon-bar"></span>
+       			 	<span class="icon-bar"></span>
+        			<span class="icon-bar"></span>                        
+      			</button>
+				<a class="navbar-brand" href="#myPage">Matthew Chin</a>
+			</div>
+			<div class="collapse navbar-collapse" id="myNavbar">
+				<ul class="nav navbar-nav navbar-right">
+					<li><a href="https://github.com/mjc714">GitHub</a></li>
+					<li><a href="#currProject">Current Project</a></li>
+					<li><a href="#projects">Projects</a></li>
+					<li><a href="#contactInfo">Contact</a></li>
+				</ul>
+			</div>
+		</div>
+	</nav>
+
+	<!--Jumbotron-->
+	<div class="jumbotron">
+		<!--<h1>Welcome!</h1>-->
+		<div class="circular-portrait">
+			<img src="/Images/photoOfMeMedium.jpg" alt="Photo of me">
+		</div>
+		<p> I graduated from Lehigh University with a B.S. in Computer Science. My current area of interest for personal projects is
+			in web app development. I am seeking opportunities as an entry-level developer. If you have any further inquiries, please
+			feel free to contact me.</p>
+	</div>
+
+	<!--Current Project container-->
+	<div id="currProject" class="container-fluid currentProject text-center">
+		<h3 class="slideanim">Current Project</h3>
+		<p class="slideanim">Restaurant Manger Web App</p>
+		<div class="slideanim">
+			<p class="primaryFeatures">Primary features</p>
+		</div>
+		</br>
+		<div class="list">
+			<li class="slideanim" style="font-size: 1.3em">
+				Allow for an owner/administrator to easily perform CRUD operations related to restaurant operations.
+			</li>
+			<li class="slideanim" style="font-size: 1.3em">
+				Allow consumers to create an account and place orders at the respective restaurants in the restaurant group.
+			</li>
+		</div>
+		<button class="slideanim btn btn-default">
+			<a href="https://github.com/mjc714/RestaurantWebApp">View current progress</a>
+		</button>
+	</div>
+
+	<!--Projects Gallery-->
+	<div id="projects" class="container-fluid projects text-center">
+		<h1 id="projectsHeading" class="slideanim">Projects</h1><br>
+		<div class="row gallery slideanim">
+			<div class="col-sm-4">
+				<!-- Project picture-->
+				<div class="thumbnail">
+					<a href="https://github.com/tomdoelp/traffic-debug">
+						<img src="/Images/PosterFinal2.jpg" class="img-responsive" alt="Video Stream Debugging Poster">
+					</a>
+					<!-- Project description -->
+					<div class="caption">
+						<h4>Video Stream Debugging</h4>
+						<p>Analyzes network interruptions in YouTube video playback and identifies most likely causes.</p><br/>
+					</div>
+				</div>
+			</div>
+			<div class="col-sm-4">
+				<div class="thumbnail">
+					<a href="https://github.com/mjc714/cse341/tree/master/mjc714chin">
+						<img src="/Images/phones.jpeg" class="img-responsive" alt="Phones">
+					</a>
+					<div class="caption">
+						<h4>Jog Wireless</h4>
+						<p>The goal of this project is to provide a realistic experience in the conceptual design, logical design, implementation,
+							operation, and maintenance of a relational database and associated applications.</p>
+					</div>
+				</div>
+			</div>
+			<div class="col-sm-4">
+				<div class="thumbnail">
+					<a id="notYet" href="#myPage">
+						<img src="/Images/questionMark.jpeg" class="img-responsive" alt="Question Mark">
+					</a>
+					<div class="caption">
+						<h4>Coming Soon!</h4>
+						<p style="text-align: center">...</p><br/><br/>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!--Contact section-->
+	<div class="contactMe">
+		<div class="col-sm-12" id="contactInfo">
+			<h1>Contact</h1><br>
+			<p>chin.matthew1212@gmail.com</p>
+		</div>
+	</div>
+
+	<!--Footer-->
+	<footer class="navbar-fixed-bottom">
+		<div class="row">
+			<h5 class="col-sm-4">&copy; Matthew Chin
+				<script>
+					document.write(new Date().getFullYear());
+				</script>
+			</h5>
+		</div>
+	</footer>
+
+	<!--Scrolling script-->
+	<script>
+		$(document).ready(function () {
+			// Add smooth scrolling to all links in navbar + footer link
+			$(".navbar a, #notYet, footer a[href='#myPage']").on('click', function (event) {
+				// Make sure this.hash has a value before overriding default behavior
+				if (this.hash !== "") {
+					// Prevent default anchor click behavior
+					event.preventDefault();
+
+					// Store hash
+					var hash = this.hash;
+
+					// Using jQuery's animate() method to add smooth page scroll
+					// The optional number (900) specifies the number of milliseconds it takes to scroll to the specified area
+					$('html, body').animate({
+						scrollTop: $(hash).offset().top
+					}, 900, function () {
+
+						// Add hash (#) to URL when done scrolling (default click behavior)
+						window.location.hash = hash;
+					});
+				} // End if
+			});
+
+			$(window).scroll(function () {
+				$(".slideanim").each(function () {
+					var pos = $(this).offset().top;
+
+					var winTop = $(window).scrollTop();
+					if (pos < winTop + 600) {
+						$(this).addClass("slide");
+					}
+				});
+			});
+		})
+	</script>
+
+</body>
+
+</html>

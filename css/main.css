@@ -1,0 +1,226 @@
+/** {
+	border: 1px solid deeppink;
+}*/
+
+body {
+	font-weight: 300;
+	font-family: 'Roboto', sans-serif;
+}
+
+.container {
+	font-weight: 300;
+	width: auto;
+}
+
+.container-fluid{
+	/*padding: 60px 50px;*/
+	padding: 90px 80px;
+}
+
+.navbar {
+      margin-bottom: 0;
+      background-color: lightskyblue;
+      z-index: 9999;
+      border: 0;
+      font-size: 12px !important;
+      line-height: 1.42857143 !important;
+      letter-spacing: 4px;
+      border-radius: 0;
+      font-family: Montserrat, sans-serif;
+}
+
+.navbar li a, .navbar .navbar-brand {
+      color: #fff !important;
+}
+
+.navbar-nav li a:hover, .navbar-nav li.active a {
+      color: lightskyblue !important;
+      background-color: #fff !important;
+}
+
+.navbar-default .navbar-toggle {
+      border-color: transparent;
+      color: #fff !important;
+}
+
+img {
+	max-width: 100%;
+	height: auto;
+}
+
+.jumbotron {
+	font-family: Montserrat, sans-serif;
+	padding-top: 8em;
+	padding-bottom: 15em;
+	background-color: lightskyblue;
+	min-height: 40em;
+}
+
+.circular-portrait{
+	margin: 0 auto;
+	position: relative;
+	width: 350px;
+	height: 350px;
+	overflow: hidden;
+	border-radius: 50%;
+}
+
+.circular-portrait img{
+	width: 100%;
+	height: auto;
+	margin: -0.5em 0em 0em 0em;
+}
+
+.jumbotron p {
+	font-size: 25px;
+	text-align: justify, center;
+	margin: 3em 0.5em -4em 0.5em;
+	line-height: 200%;
+	color: #fff;
+}
+
+.currentProject{
+	background-color: #ffffff;
+	margin-top: -2em;
+}
+
+.currentProject > h3{
+	text-align: center;
+	font-size: 3em;
+	color: rgb(45, 45, 45);
+}
+
+.currentProject > p{
+	font-size: 1.5em;
+	color: rgb(45, 45, 45);
+	text-align: justify, center;
+	line-height: 100%;
+	padding: 1em 0em 0em 0em;
+}
+
+.primaryFeatures{
+	font-size: 2em;
+	padding: 1em 0em 0em 0em;
+}
+
+.currentProject > a{
+	font-size: 1.5em;
+	padding: 2em 0em 0em 0em;
+}
+
+.list{
+	font-size: 1em;
+	list-style-type: none;
+	text-align: justify, center;
+	padding: 0em 0em 2em 0em;
+}
+
+.projects{
+	background-color: rgb(81, 135, 189);
+}
+
+#projectsHeading {
+	font-size: 75px;
+	display: inline-block;
+	line-height: 0.85;
+	margin-top: 40px;
+	margin-bottom: 55px;
+}
+
+#projectGallery h1 {
+	padding-left: 0.1em;
+}
+
+.caption h4 {
+	text-align: center;
+}
+
+.caption p{
+	text-align: justify;
+}
+
+.thumbnail img {
+	width: 100%;
+	height: auto;
+}
+
+.thumbnail img:hover {
+	box-shadow: 0 0 2px 1px rgba(0, 140, 186, 0.5);
+}
+
+#contactInfo {
+	background-color: mediumseagreen;
+}
+
+#contactInfo p {
+	color: hsl(0, 0%, 14%);
+	font-size: 25px;
+	padding: 0em 0em 2em 0em;
+}
+
+footer {
+	width: auto;
+	height: min-content;
+	font-weight: 300;
+	font-family: 'Roboto', sans-serif;
+	background-color: hsl(0, 0%, 14%);
+}
+
+footer h5 {
+	display: flex;
+	justify-content: flex-start;
+	margin-left: 0.5em;
+	color: hsl(0, 0%, 94%);
+}
+
+.slideanim {visibility:hidden;}
+
+.slide {
+    /* The name of the animation */
+    animation-name: slide;
+    -webkit-animation-name: slide; 
+    /* The duration of the animation */
+    animation-duration: 1s; 
+    -webkit-animation-duration: 1s;
+    /* Make the element visible */
+    visibility: visible; 
+}
+
+/* Go from 0% to 100% opacity (see-through) and specify the percentage from when to slide in the element along the Y-axis */
+@keyframes slide {
+    0% {
+        opacity: 0;
+        transform: translateY(70%);
+    } 
+    100% {
+        opacity: 1;
+        transform: translateY(0%);
+    } 
+}
+
+@-webkit-keyframes slide {
+    0% {
+        opacity: 0;
+        -webkit-transform: translateY(70%);
+    } 
+    100% {
+        opacity: 1;
+        -webkit-transform: translateY(0%);
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .col-sm-4 {
+      text-align: center;
+      margin: 25px 0;
+    }
+    .btn-lg {
+        width: 100%;
+        margin-bottom: 35px;
+    }
+}
+  @media screen and (max-width: 480px) {
+    .logo {
+        font-size: 150px;
+    }
+}
